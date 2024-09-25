@@ -42,4 +42,5 @@ Route::post('/login', [LoginController::class, 'login'])->name('login-post');
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/admin', [ApplicationController::class, 'admin'])->name('admin');
     Route::get('/admin/export-excel', [ApplicationController::class, 'exportToExcel'])->name('adminExcel');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
